@@ -1,0 +1,8 @@
+>> Flex folder
+- flex filename.l
+> Copy mfcalc.l, mfcalc.y and the generated files to the next folder
+>> Bison folder
+- bison -yd filename.y
+> Copy bison.h, mfcalc.l, mfcalc.y and the generated files to the next folder
+>> MinGW folder
+- gcc y.tab.c lex.yy.v -lm -o myCalculator
