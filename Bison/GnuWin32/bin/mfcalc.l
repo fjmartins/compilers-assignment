@@ -1,3 +1,8 @@
+%{
+# include "mfcalc.h"
+# include "bison.h"
+%}
+
 %%
 
 [0-9]*\.?[0-9]+ {

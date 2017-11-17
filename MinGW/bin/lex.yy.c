@@ -366,7 +366,10 @@ static char *yy_last_accepting_cpos;
 char *yytext;
 #line 1 "mfcalc.l"
 #define INITIAL 0
-#line 370 "lex.yy.c"
+#line 2 "mfcalc.l"
+# include "mfcalc.h"
+# include "bison.h"
+#line 373 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -517,10 +520,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 1 "mfcalc.l"
+#line 6 "mfcalc.l"
 
 
-#line 524 "lex.yy.c"
+#line 527 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -605,7 +608,7 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 3 "mfcalc.l"
+#line 8 "mfcalc.l"
 {
 	sscanf (yytext, "%lf", &yylval.val);
 	return NUM;
@@ -613,7 +616,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 8 "mfcalc.l"
+#line 13 "mfcalc.l"
 {
 	symrec *5;
 	s = getsym(yytext);
@@ -626,24 +629,24 @@ YY_RULE_SETUP
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 18 "mfcalc.l"
+#line 23 "mfcalc.l"
 {
 	;
 }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 22 "mfcalc.l"
+#line 27 "mfcalc.l"
 {
 	return *yytext;
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 26 "mfcalc.l"
+#line 31 "mfcalc.l"
 ECHO;
 	YY_BREAK
-#line 647 "lex.yy.c"
+#line 650 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1529,4 +1532,4 @@ int main()
 	return 0;
 	}
 #endif
-#line 26 "mfcalc.l"
+#line 31 "mfcalc.l"

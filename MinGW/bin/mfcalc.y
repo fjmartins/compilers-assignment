@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h> /* Para funcoes matematicas cos() sin() tan() etc */
+#include "mfcalc.h"
 %}
 
 %union {
@@ -12,7 +13,6 @@
 }
 
 /* Criacao de tokens para numeros e expressoes */
-
 %token	<val>	NUM
 %token	<tptr>	VAR FNCT
 %type	<val>	exp
@@ -25,7 +25,7 @@
 %left	NEG
 %right	'^'
 
-/* Gramatica */
+/* Gramatica a seguir */
 
 %%
 

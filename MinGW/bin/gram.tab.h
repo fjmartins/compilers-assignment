@@ -39,18 +39,45 @@
    /* Put the tokens into the symbol table, so that GDB and other debuggers
       know about them.  */
    enum yytokentype {
-     NUM = 258,
-     VAR = 259,
-     FNCT = 260,
-     NEG = 261
+     NUMBER = 258,
+     L_BRACKET = 259,
+     R_BRACKET = 260,
+     DIV = 261,
+     MUL = 262,
+     ADD = 263,
+     SUB = 264,
+     EQUALS = 265,
+     PI = 266,
+     POW = 267,
+     SQRT = 268,
+     FACTORIAL = 269,
+     MOD = 270,
+     LOG2 = 271,
+     LOG10 = 272,
+     FLOOR = 273,
+     CEIL = 274,
+     ABS = 275,
+     GBP_TO_USD = 276,
+     USD_TO_GBP = 277,
+     GBP_TO_EURO = 278,
+     EURO_TO_GBP = 279,
+     USD_TO_EURO = 280,
+     EURO_TO_USD = 281,
+     COS = 282,
+     SIN = 283,
+     TAN = 284,
+     COSH = 285,
+     SINH = 286,
+     TANH = 287,
+     CEL_TO_FAH = 288,
+     FAH_TO_CEL = 289,
+     M_TO_KM = 290,
+     KM_TO_M = 291,
+     VAR_KEYWORD = 292,
+     VARIABLE = 293,
+     EOL = 294
    };
 #endif
-/* Tokens.  */
-#define NUM 258
-#define VAR 259
-#define FNCT 260
-#define NEG 261
-
 
 
 
@@ -59,15 +86,15 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 9 "mfcalc.y"
+#line 29 "gram.y"
 
-	double val;
-	symrec *tptr;
+	int index;
+	double num;
 
 
 
 /* Line 1676 of yacc.c  */
-#line 71 "y.tab.h"
+#line 98 "gram.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
